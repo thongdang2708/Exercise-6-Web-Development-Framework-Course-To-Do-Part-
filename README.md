@@ -11,4 +11,26 @@ Run by: npm run dev
 
 Set in a package.json as in a script as below:
 
-<img width="574" alt="image" src="https://user-images.githubusercontent.com/89829761/194030870-84218e6d-4ec1-49e2-a038-6101d3c5528d.png"
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
+  },
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "todolist",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Thong Dang",
+  "license": "MIT"
+}
+
